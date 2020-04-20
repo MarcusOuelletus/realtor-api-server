@@ -1,0 +1,13 @@
+{{ define "index.html" }}
+<script>
+    window['bamls'] = {
+        areas: {{ .Areas }},
+        token: {{ .Token }},
+        colorPrimary: {{ .ColorPrimary }},
+        logo: {{ .Logo }},
+        {{ if .All }}all: true,{{ end }}
+        {{ if .Sold }}sold: true,{{ end }}
+        {{ if .Tables }}tables: {{ .Tables }},{{ end }}
+    };
+</script>
+{{ end }}
